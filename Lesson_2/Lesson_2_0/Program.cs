@@ -1,13 +1,16 @@
 ﻿// Напишите программу, которая выводит случайное число
 // из отрезка [10, 99] и показывает наибольшую цифру числа.
-int MaxNumber(int num)
-{
-    Console.WriteLine(num);
+int num = new Random().Next(10, 100);
 
-    if (num % 10 > num / 10)
-        return num % 10;
+int FindMax(int num) // объявляем функцию, которая на входе получает переменную num
+{
+    Console.WriteLine(num); // выводим в консоль сгенерированное число
+
+    if (num % 10 > num / 10) // если у этого числа отстаток от деления на 10 больше, чем num деленое на 10
+        return num % 10; // выводим остаток от деления
     else
-        return num / 10;
+        return num / 10; //выводим итог деления 
 }
 
-Console.WriteLine(MaxNumber(new Random().Next(10, 100)));
+Console.WriteLine(FindMax(num));
+
