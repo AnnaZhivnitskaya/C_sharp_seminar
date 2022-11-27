@@ -4,15 +4,14 @@
 Console.WriteLine("Введите номер дня недели");
 int num = int.Parse(Console.ReadLine()!);
 
-string Holyday(int num)
+if (num < 8)
 {
-    if (num = 6 | 7)
-    {
-        return ("выходной");
-    }
-    else
-    {
-        return ("будний");
-    }
+if (num == 6 || num == 7)
+    Console.WriteLine("выходной");
+
+else
+    Console.WriteLine("будний");
 }
-Console.WriteLine(Holyday(num));
+else
+Console.WriteLine("Такого дня не существует");
+
