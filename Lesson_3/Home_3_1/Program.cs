@@ -10,13 +10,11 @@ int s4 = pali / 10 % 10;
 int s5 = pali % 10;
 
 if (pali > 99999 || pali < 10000)
-{
+
     Console.WriteLine("Число введено неверно");
-}
 
 else if(s1 == s5 & s2 == s4)
     Console.WriteLine("палиндром");
 
 else
     Console.WriteLine("не палиндром");
-
