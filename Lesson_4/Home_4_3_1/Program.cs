@@ -48,5 +48,5 @@ int[] EightMass(int size)
     return arr;
 }
 
-int[] arr_1 = EightMass(int.Parse(Console.ReadLine()));
+int[] arr_1 = EightMass(int.Parse(Console.ReadLine()!));
 Print(arr_1);
