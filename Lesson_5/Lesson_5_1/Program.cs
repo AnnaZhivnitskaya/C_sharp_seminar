@@ -23,8 +23,8 @@ int[] MassNums(int size, int from, int to)
 
 void SumPosNeg(int[] arr)
 {
-    int pos, neg;
-    pos = neg = 0;
+    int pos, neg; //объявляются сразу две переменные
+    pos = neg = 0; // присваивание значени "ноль" сразу двум переменным
 
     for (int i = 0; i < arr.Length; i++)
     {
