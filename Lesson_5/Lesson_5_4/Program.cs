@@ -6,7 +6,7 @@ int[] Array(int sum, int from, int to)
     int[] arr = new int[sum];
     for (int i = 0; i < sum; i++)
     {
-        i = new Random().Next(0, 100);
+        i = new Random().Next(from, to);
     }
     return arr;
 }
