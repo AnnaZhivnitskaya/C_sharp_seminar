@@ -7,10 +7,13 @@ int numA = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите число B");
 int numB = int.Parse(Console.ReadLine()!);
 
-int result= 0;
-
-for(int n = 1; n <= numB; n++)
-
-result = (numA * numA) * n;
-
-Console.WriteLine(result);
+int Pro(int numA, int numB)
+{
+    int result = 1;
+    for (int n = 1; n <= numB; n++)
+    {
+        result = result * numA;
+    }
+    return result;
+}
+Console.WriteLine(Pro(numA, numB));
