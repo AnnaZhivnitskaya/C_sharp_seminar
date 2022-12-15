@@ -1,0 +1,56 @@
+﻿//4. Задайте двумерный массив. Введите элемент, и найдите первое его вхождение,
+//    выведите позиции по горизонтали и вертикали, или напишите, что такого элемента нет.
+
+int[,] MassNums(int row, int column, int from, int to)
+{
+    int[,] arr = new int[row, column];
+
+    for (int i = 0; i < row; i++)
+        for (int j = 0; j < column; j++)
+            arr[i, j] = new Random().Next(from, to);
+
+    return arr;
+}
+
+string FoundNum(int[,] array, int num)
+{
+    int row1 = array.GetLength(0);
+    int column1 = array.GetLength(1);
+
+        for (int i = 0; i < row1; i++)
+        for (int j = 0; j < column1; j++)
+            if (array[i, j] == num) return $"[{i + 1}, {j + 1}]";
+
+    return "такого элемента нет";
+}
+
+
+void Print(int[,] arr)
+{
+    int row_size = arr.GetLength(0);
+    int column_size = arr.GetLength(1);
+
+    for (int i = 0; i < row_size; i++)
+    {
+        for (int j = 0; j < column_size; j++)
+            Console.Write($" {arr[i, j],4} ");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+
+}
+
+Console.Write("Enter the number of rows: ");
+int row = int.Parse(Console.ReadLine()!);
+Console.Write("Enter the number of columns: ");
+int column = int.Parse(Console.ReadLine()!);
+Console.Write("Enter the number of search for: ");
+int num = int.Parse(Console.ReadLine()!);
+
+int[,] arr_1 = MassNums(row, column,
+                        int.Parse(Console.ReadLine()!),
+                        int.Parse(Console.ReadLine()!));
+Print(arr_1);
+
+Console.WriteLine($"Element {num} located in the matrix - {FoundNum(arr_1, num)}");
+

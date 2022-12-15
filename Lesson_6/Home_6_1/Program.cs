@@ -4,7 +4,7 @@
 Console.WriteLine("Введите любое количество чисел в отрицательном и положительном диапазоне");
 
 
-int[] arr = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+int[] arr = Console.ReadLine()!.Split(" ").Select(x => int.Parse(x)).ToArray();
 //cчитывает из консоли строку, разделяет её по пробелам, для каждой подстроки вызывает 
 //int.Parse и приводит полученную коллекцию к типу массива.
 //Select(x => int.Parse(x)) можно заменить на Select(int.Parse),
