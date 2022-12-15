@@ -45,4 +45,3 @@ Print(collection);
 
 Console.WriteLine(Find(collection, int.Parse(Console.ReadLine()!)));
 
-
